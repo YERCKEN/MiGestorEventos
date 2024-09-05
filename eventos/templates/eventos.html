@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS</title>
+</head>
+
+<body>
+    
+    <h1>
+        Hola estos son los eventos
+
+        
+    </h1>
+    <ul>
+        {% for evento in eventos %}
+            <li>{{ evento.nombre }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
