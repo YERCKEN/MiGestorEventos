@@ -7,7 +7,14 @@ Parcial #1 HPA IV - 2024
 
 #EJECUCIÓN 9/5/2024
 
+
 Vista eventos
+
+
 ![image](https://github.com/user-attachments/assets/777addcf-d8f9-41b0-88ab-83144f2f38ac)
+
+
 Vista Crear eventos
+
+
 ![image](https://github.com/user-attachments/assets/d56ffa55-61ea-42bd-83da-ece4e58da492)
