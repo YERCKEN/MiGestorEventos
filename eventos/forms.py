@@ -22,6 +22,10 @@ class EventoForm(forms.ModelForm):
     #funcuion para validar el campo nombre
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
+        
         if "Cancelado" in nombre:
-            raise forms.ValidationError("El nombre del evento no puede contener la palabra 'Cancelado'.")
+            raise forms.ValidationError("'Cancelado' No es un nombre válido")
+        elif "CANCELADO" in nombre:
+            raise forms.ValidationError("'CANCELADO' No es un nombre válido")
+        
         return nombre

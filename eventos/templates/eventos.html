@@ -1,25 +1,63 @@
+{% load static %}
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENTOS</title>
+    
+    <link rel="stylesheet" href="{% static 'css/eventos.css' %}">
 </head>
 
 <body>
     
-    <h1>
-        Hola estos son los eventos
+    <div class="eventos">
+
+
+
+        <div class="headerEventos">
+            <h1>
+                Eventos
+            </h1>
+            
+            <!-- REDIRECCIONAR A crearEventos -->
+            <a href="{% url 'crearEvento' %}">
+                <button>
+                    +
+                </button>   
+            </a>
+        </div>
 
         
-    </h1>
-    <ul>
+
+
         {% for evento in eventos %}
 
-            <li><b>{{ evento.nombre }}</b>, organizador : {{ evento.organizador}}</li>
-   
+            <div class="eventos-evento">
+                
+                <div class="eventos-evento-he">
+                    <b>{{ evento.nombre }} </b>   
+                    <p>{{evento.fecha}}</p>    
+                    <p>{{evento.hora}}</p>  
+
+                </div>
+
+
+                <div class="eventos-organizador">
+                    <p>organizador:  </p> <p class="organizador">  {{ evento.organizador}}</p>
+                </div>
+
+                <p class="desc">{{evento.descripcion}}</p>
+                <p>Lugar: {{evento.lugar}}</p>
+              
+            
+            </div>
+
         {% endfor %}
-    </ul>
+
+
+    </div>
+
 </body>
 
 </html>
