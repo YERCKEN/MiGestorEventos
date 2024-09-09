@@ -124,3 +124,10 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+# Configuración de la autenticación
+
+LOGIN_REDIRECT_URL = 'eventos'  
+LOGIN_URL = 'login'

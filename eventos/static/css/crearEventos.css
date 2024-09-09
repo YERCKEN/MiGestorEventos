@@ -1,0 +1,153 @@
+/* Estilos globales */
+* {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alineación en columna para el contenido centrado */
+    padding: 20px;
+}
+
+/* Encabezado */
+h1 {
+    font-size: 28px;
+    color: #4b4a4a;
+    margin: 0;
+    text-align: center;
+}
+
+
+form {
+    width: 50%; /* Ancho similar a la página "eventos" */
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: left;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+
+form input::placeholder{
+    color: #b2b2b2;
+}
+
+.divHoraDate{
+ 
+    width: 100%;
+
+    justify-content: center;
+    display: flex;
+}
+
+.campo-hora{
+    display: flex;
+    flex-wrap: wrap;
+   
+    width: 50%;;
+
+}
+.campo-fecha{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+
+    width: 50%;;
+
+}
+
+.pequeI{
+
+    width: 100%;
+
+}
+
+
+/* Botón del formulario */
+form button {
+    width: 100%;
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid #e8e8e8;
+    color: #b2b2b2;
+    transition: 300ms;
+
+    padding: 10px;
+}
+
+form button:hover {
+    background-color: #caffcc;
+    color: rgb(2, 155, 66);
+    border: 2px solid white;
+    
+}
+
+/* Mejora de la visualización del formulario */
+form p {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.header{
+    justify-content: space-between;
+    display: flex;
+
+    width: 50%;
+
+}
+
+.header a{
+
+    margin: 0;
+    padding: 0;
+
+    width: 15%;
+
+   
+}
+
+.header button{
+
+    margin: 0;
+    width: 100%;
+
+
+    border: 2px solid #ff5e5e;
+    background-color: white;
+    color: #ff5e5e;
+
+    border-radius: 20px;
+    font-size: 20px;    
+}
+
+.header button:hover{
+    background-color: #ff5e5e;
+    color: white;
+    cursor: pointer;
+
+}
+

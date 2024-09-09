@@ -1,148 +1,153 @@
-*{
-    margin-top: 10px;
+    *{
+        margin-top: 10px;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-}
+    }
 
-.headerEventos{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 70%;
-    margin-top: 20px; 
+    .headerEventos{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 70%;
+        margin-top: 20px; 
 
-    margin-bottom: 15px;
+        margin-bottom: 15px;
 
-}
+    }
 
-.eventos h1{
-    width: 40%;
+    .eventos h1{
+        width: 40%;
 
-    font-size: 25px;
-    color: #4b4a4a;
-    margin: 0;
-}
+        font-size: 25px;
+        color: #4b4a4a;
+        margin: 0;
+    }
 
 
 
-.eventos{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 60%;
+    .eventos{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 60%;
+    
+    }
+
+    .eventos-evento{
+        font-size: 20px;
+        /* ALNEACIÓN */
+        justify-content: left;
+        
+
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        margin: 10px;
+        /* box */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        width:  60%;
+
+        border-radius: 10px;
+
+    
+    }
+
+    .eventos-evento-he{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
+
+    .eventos a{
+        width: 20%;
+        text-decoration: none;
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
   
-}
 
-.eventos-evento{
-    font-size: 20px;
-    /* ALNEACIÓN */
-    justify-content: left;
+    .eventos button{
+        width: 100%;
+        font-size: 20px;
+        margin: 0;
+
+        font-weight: bold;
+
+        background-color: white;
+        border: none;    border-radius: 20px;
+
+        cursor: pointer;
     
+        border: 2px solid #e8e8e8;
+        color: #b2b2b2;
 
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    }
 
-    margin: 10px;
-     /* box */
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    .eventos button:hover{
+        background-color: #caffcc;
+        color: rgb(2, 155, 66);
 
-    width:  60%;
+        border: 2px solid white;
 
-    border-radius: 10px;
+        transition: 500ms;
 
-   
-}
-
-.eventos-evento-he{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
+    }   
 
 
 
-.eventos a{
-    width: 40%;
-    text-decoration: none;
-    margin: 0;
-
-    display: flex;
-    justify-content: center;
-}
-
-.eventos button{
-    width: 100%;
-    font-size: 20px;
-    margin: 0;
-
-    font-weight: bold;
-
-    background-color: white;
-    border: none;    border-radius: 20px;
-
-    cursor: pointer;
-   
-    border: 2px solid #e8e8e8;
-    color: #b2b2b2;
-
-}
-
-.eventos button:hover{
-    background-color: #caffcc;
-    width: 50%;
-    color: rgb(2, 155, 66);
-
-    border: 2px solid white;
-
-    transition: 500ms;
-
-}   
-
-
-
-.eventos-evento b {
- 
-    width: 70%;
-    color: #4b4a4a;
-
-}
-
-.eventos-evento p {
-    font-style: italic;
-     color: gray;
-    text-align: left;
-
-    font-weight: bolder;
+    .eventos-evento b {
     
-    font-size: 12px;
- }
+        width: 70%;
+        color: #000000;
+
+    }
+
+    .eventos-evento p {
+        font-style: italic;
+        color: rgb(0, 0, 0);
+        text-align: left;
+
+        
+        
+        font-size: 13px;
+    }
 
 
-.eventos-organizador{
-    display: flex;
-    justify-content: left;
-    width: 100%;
-    margin: 0;
+    .eventos-organizador{
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        margin: 0;
 
-}
+    }
 
 
- .eventos-evento .organizador{
-    margin-left: 5px ;
- }
+    .eventos-evento .organizador{
+        margin-left: 5px ;
+        
+    }
 
-.eventos-evento .desc{
+    .eventos-evento .desc{
 
-    width: 100%;
-    text-align: justify;
-    justify-content: left;
-}
+        width: 100%;
+        text-align: justify;
+        justify-content: left;
+    }
+
+
+  

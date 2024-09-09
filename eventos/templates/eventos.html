@@ -12,9 +12,6 @@
 <body>
     
     <div class="eventos">
-
-
-
         <div class="headerEventos">
             <h1>
                 Eventos
@@ -26,13 +23,14 @@
                     +
                 </button>   
             </a>
+            
+            <a href="{% url 'organizadores' %}">
+            <button>organizadores</button>
+            </a>
+
         </div>
 
-        
-
-
         {% for evento in eventos %}
-
             <div class="eventos-evento">
                 
                 <div class="eventos-evento-he">
@@ -42,20 +40,17 @@
 
                 </div>
 
-
                 <div class="eventos-organizador">
                     <p>organizador:  </p> <p class="organizador">  {{ evento.organizador}}</p>
                 </div>
 
                 <p class="desc">{{evento.descripcion}}</p>
                 <p>Lugar: {{evento.lugar}}</p>
-              
-            
+    
             </div>
 
         {% endfor %}
-
-
+        
     </div>
 
 </body>

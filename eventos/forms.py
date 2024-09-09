@@ -3,7 +3,7 @@ from  . import models
 
 class EventoForm(forms.ModelForm):
     
-    #llenabos el list box
+    #llenamoss el list box
     organizador = forms.ModelChoiceField(
         queryset= models.Organizador.objects.all(),
         required=True,
@@ -12,12 +12,22 @@ class EventoForm(forms.ModelForm):
     
     fecha = forms.DateField(
         input_formats=['%d-%m-%Y'],
-        widget=forms.TextInput(attrs={'placeholder': 'dd-mm-yyyy'})
+        widget=forms.TextInput(attrs={'placeholder': 'dd-mm-yyyy', 'class': 'pequeI'})
+        # clase para estilo
+    
+    )
+    
+    hora = forms.TimeField(
+
+        widget=forms.TextInput(attrs={'placeholder': 'hh:mm', 'class': 'pequeI'})
+
     )
     
     class Meta:
         model = models.Eventos
         fields = ['nombre', 'hora', 'fecha', 'lugar', 'descripcion', 'organizador']
+    
+    
     
     #funcuion para validar el campo nombre
     def clean_nombre(self):
@@ -25,7 +35,4 @@ class EventoForm(forms.ModelForm):
         
         if "Cancelado" in nombre:
             raise forms.ValidationError("'Cancelado' No es un nombre válido")
-        elif "CANCELADO" in nombre:
-            raise forms.ValidationError("'CANCELADO' No es un nombre válido")
-        
         return nombre
