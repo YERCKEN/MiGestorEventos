@@ -12,6 +12,22 @@
 <body>
     
     <div class="eventos">
+       
+
+        <!-- USER Y CERRAR SESION  -->
+        <div class="headerUser">
+            
+            <p>{{ user.username }}</p>
+                <!-- MOSTRAR INCIIAR SESION Y CERRAR SESION -->
+            {% if user.is_authenticated %}
+                <a href="{% url 'cerrarSesion' %}">←</a>
+            {% else %}
+                <a href="{% url 'login' %}">Iniciar Sesión</a>
+            {% endif %}
+        </div>
+         
+
+
         <div class="headerEventos">
             <h1>
                 Eventos
@@ -24,7 +40,7 @@
                 </button>   
             </a>
             
-            <a href="{% url 'organizadores' %}">
+            <a id="btnOrganizadores" href="{% url 'organizadores' %}">
             <button>organizadores</button>
             </a>
 
@@ -46,6 +62,13 @@
 
                 <p class="desc">{{evento.descripcion}}</p>
                 <p>Lugar: {{evento.lugar}}</p>
+
+                 <!-- EDITAR -->
+                <div class="linkEditar">
+
+                    <a href="{% url 'editarEvento' evento.id %}" class="btn btn-primary">Editar</a>
+
+                </div>
     
             </div>
 

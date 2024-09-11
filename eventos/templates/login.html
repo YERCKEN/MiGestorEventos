@@ -1,15 +1,34 @@
+
+{% load static %}
+
 <!-- login.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="{% static 'css/loginRegister.css' %}">
 </head>
 <body>
-    <h1>Iniciar Sesión</h1>
+
+
+
     <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Iniciar Sesión</button>
+        <div class="contenedorTotal">
+            <div class="contenedorForm">
+                <h1>Iniciar Sesión</h1>
+    
+                {% csrf_token %}
+                {{ form.username }}
+                {{ form.password}}
+           
+                <button type="submit">Iniciar Sesión</button>
+
+                <a href="{% url 'registro' %}"> Registro</a>
+            </div>
+
+        </div>
+     
     </form>
+    
 </body>
 </html>

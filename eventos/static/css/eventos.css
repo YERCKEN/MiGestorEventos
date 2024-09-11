@@ -151,3 +151,54 @@
 
 
   
+.linkEditar a{
+
+    text-decoration: none;
+
+    color: rgb(43, 50, 44);
+    width: 100%;
+    justify-content: right;
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+.linkEditar a:hover{
+    color: rgb(0, 210, 87);
+    transition: 300ms;
+}
+
+#btnOrganizadores{
+    width: 35%;
+    
+}
+
+
+.headerUser{
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px; 
+
+    margin-bottom: 15px;
+
+}
+
+.headerUser p{
+
+    font-size: 20px;
+    color: #4b4a4a;
+    margin: 0;
+}
+.headerUser a{
+    text-decoration: none;
+    color: #4b4a4a;
+    font-size: 20px;
+    margin: 0;
+}
+
+.headerUser a:hover{
+    color: #4f63ff;
+    transition: 300ms;
+}   

@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if creando %}Crear Evento{% else %}Editar Evento{% endif %}</title>
+    <link rel="stylesheet" href="{% static 'css/crearEventos.css' %}">
+</head>
+<body>
+
+    <div class="header">
+        <h1>{% if creando %}Crear Evento{% else %}Editar Evento{% endif %}</h1>
+        <a href="{% url 'eventos' %}">
+            <button>x</button>
+        </a>
+    </div>
+
+    <!-- POST -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.nombre.label_tag }} {{ form.nombre }}
+        
+        <div class="divHoraDate">
+            <div class="campo-hora">
+                {{ form.hora.label_tag }}
+                {{ form.hora }}
+            </div>
+
+            <div class="campo-fecha">
+                {{ form.fecha.label_tag }}
+                {{ form.fecha }}
+            </div>
+        </div>
+        
+        {{ form.lugar.label_tag }} {{ form.lugar }}
+        {{ form.descripcion.label_tag }} {{ form.descripcion }}
+        {{ form.organizador.label_tag }} {{ form.organizador }}
+        
+        <!-- Cambiamos el texto del botón según la acción -->
+        <button type="submit">{% if creando %}Guardar{% else %}Actualizar{% endif %}</button>
+    </form>
+
+</body>
+</html>
