@@ -55,7 +55,6 @@ class RegistroForm(forms.ModelForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'username'}))
 
     password = forms.CharField(label='Contraseña', widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}))
-    
     password2 = forms.CharField(label='Repetir Contraseña', widget=forms.PasswordInput(attrs={'placeholder': 'Repetir Contraseña'}))
 
     class Meta:

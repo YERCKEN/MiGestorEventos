@@ -37,7 +37,7 @@
         justify-content: center;
         flex-wrap: wrap;
         width: 60%;
-    
+        
     }
 
     .eventos-evento{
@@ -77,6 +77,8 @@
 
         display: flex;
         justify-content: center;
+
+        
     }
 
   
@@ -169,9 +171,10 @@
 }
 
 #btnOrganizadores{
-    width: 35%;
+    width: 25%;
     
 }
+
 
 
 .headerUser{
@@ -202,3 +205,10 @@
     color: #4f63ff;
     transition: 300ms;
 }   
+
+
+#btnOrganizadores button{
+    font-size: 16px;
+}
+
+

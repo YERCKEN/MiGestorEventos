@@ -1,17 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crear Organizador</title>
+
+    <link rel="stylesheet" href="{% static 'css/crearOrganizador.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loginRegister.css' %}">
+
+
 </head>
 <body>
-    <h1>Crear Nuevo Organizador</h1>
+    
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
+        
+        
+        <div class="contenedorTotal">
+            
+            <div class="contenedorForm">
+                <h1>Crear Nuevo Organizador</h1>
+
+
+                {{ form.nombre.label_tag }}
+                {{ form.nombre }}
+                {{ form.apellido.label_tag }}
+
+                {{ form.apellido }}
+
+
+                <button type="submit">Guardar</button>
+
+                <a href="{% url 'organizadores' %}">Volver a organizadores</a>
+            </div>
+        </div>
+      
+        
+       
     </form>
-    <a href="{% url 'organizadores' %}">Volver a la lista</a>
+
+
 </body>
 </html>

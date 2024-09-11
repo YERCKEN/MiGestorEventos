@@ -11,7 +11,6 @@ urlpatterns = [
     
     path('editarEvento/<int:idEvento>/', views.editarEvento, name='editarEvento'),
     
-    
     # Clases
     path('organizadores/', views.Organizadores.as_view(), name='organizadores'),
 

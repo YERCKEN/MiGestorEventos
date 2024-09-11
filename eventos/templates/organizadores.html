@@ -1,24 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/organizadores.css' %}">
 </head>
 <body>
     
-    <h1>organizadores</h1>
 
-    <!-- LISTAMOS LOS ORGANIZADORES --------------------------- -->
-     
-    {% for organizador in organizadores %}
+    <div class="contenedor">
 
-        <div class="organizadores-organizador">
-            <p>{{organizador.nombre}} {{organizador.apellido}}</p>
+        <div class="contenedor-organizadores">
+
+            <div class="headerOrganizadores">
+                
+                <h1>organizadores</h1>
+
+                <a href="{% url 'crearOrganizador' %}">Crear organizador</a>
+                <a href="{% url 'eventos' %}">Volver</a>
+
+            </div>
+
+        
+            <!-- LISTAMOS LOS ORGANIZADORES --------------------------- -->
+             
+            {% for organizador in organizadores %}
+        
+                <div class="organizadores-organizador">
+                    <p>{{organizador.nombre}} {{organizador.apellido}}</p>
+                </div>
+            {% endfor %}
+            
+
         </div>
-    {% endfor %}
-    
-    <a href="{% url 'crearOrganizador' %}">Crear organizador</a>
+    </div>
 
 
 </body>
